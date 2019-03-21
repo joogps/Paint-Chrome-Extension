@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Paint",
+  "version": "1.0",
+  "content_scripts": [{
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["p5.js", "p5.dom.js", "sketch.js"]
+  }],
+  "background": {
+    "scripts": ["context_menu.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "logo.png"
+  },
+  "icons": {
+    "400": "logo.png"
+  }
+}
